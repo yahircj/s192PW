@@ -12,4 +12,8 @@ use Illuminate\Support\Facades\Route;
 //ruta tipo view
 Route::view('/','welcome' );
 
-route::view('/form', 'formulario');
+Route::view('/form', 'formulario')->name('formulario');
+
+Route::view('/clientes', 'clientes')->name('clientes');
+
+Route::view('/inicio', 'inicio')->name('inicio');
