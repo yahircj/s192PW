@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-
+//Shift alt a
 //ruta tipo get
 /* Route::get('/', function () {
     return view('welcome');
