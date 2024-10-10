@@ -1,6 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controladorVistas;
+
+
+route::get('/',[controladorVistas::class, 'home'])->name('inicio');
+
+route::get('/form',[controladorVistas::class, 'formulario'])->name('formulario');
+
+route::get('/clientes',[controladorVistas::class, 'consulta'])->name('clientes');
+
+Route::view('/componentes', 'componentes')->name('componentes'); 
 
 //Shift alt a
 //ruta tipo get
@@ -10,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //ruta tipo view
-Route::view('/','welcome' );
+/* Route::view('/','welcome' );
 
 Route::view('/form', 'formulario')->name('formulario');
 
@@ -18,4 +28,5 @@ Route::view('/clientes', 'clientes')->name('clientes');
 
 Route::view('/inicio', 'inicio')->name('inicio');
 
-Route::view('/componentes', 'componentes')->name('componentes');
+*/
+
