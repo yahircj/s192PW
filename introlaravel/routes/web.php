@@ -9,8 +9,10 @@ route::get('/',[controladorVistas::class, 'home'])->name('inicio');
 route::get('/form',[controladorVistas::class, 'formulario'])->name('formulario');
 
 route::get('/clientes',[controladorVistas::class, 'consulta'])->name('clientes');
-
+ 
 Route::view('/componentes', 'componentes')->name('componentes'); 
+
+Route::post('/enviarCliente', [controladorVistas::class, 'procesarCliente'])->name('enviar');
 
 //Shift alt a
 //ruta tipo get
