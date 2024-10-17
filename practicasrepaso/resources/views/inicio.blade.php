@@ -10,7 +10,7 @@
     @vite(['resources/js/app.js'])
 
 </head>
-<body>
+<body style="background-color: #546858;">
     <div class="container">
         <p><span id="fecha"></span></p>
         <br>
@@ -33,7 +33,7 @@
             <h3>122043995@upq.edu.mx</h3>
             <h3>S-192</h3>
             <br>
-            <a href="{{route('rep')}}" class="btn btn-primary">Repasos</a>
+            <a href="{{route('rep')}}" class="btn btn-warning">Repasos</a>
         </div>
     </div>
 </body>
