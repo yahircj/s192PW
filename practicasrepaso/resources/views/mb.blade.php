@@ -10,7 +10,7 @@
         <form method="POST" action="{{ route('convertirMb') }}">
             @csrf
             <label for="mb">MB:</label>
-            <input type="number" step="any" name="mb" id="mb" value="{{ old('mb') }}">
+            <input type="number" step="any" name="mb" id="mb">
             <button type="submit">Convertir a GB</button>
         </form>
     
@@ -21,3 +21,4 @@
     
 
     @endsection
+

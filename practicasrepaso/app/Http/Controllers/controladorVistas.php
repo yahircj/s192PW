@@ -22,3 +22,5 @@ class controladorVistas extends Controller
         return view('gb');
     }
 }
+
+

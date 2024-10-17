@@ -24,3 +24,4 @@ class seleccionarCalculadora extends Component
         return view('components.seleccionar-calculadora');
     }
 }
+
