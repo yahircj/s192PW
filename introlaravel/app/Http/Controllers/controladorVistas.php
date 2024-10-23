@@ -19,6 +19,21 @@ class controladorVistas extends Controller
     }
     
     public function procesarCliente(Request $peticion){
+
+        //Respuesta de redirección
+        //inicio
+        /* return redirect('/'); */
+        //Nombre de una ruta
+        /* return redirect()->route('clientes'); */
+        //regresar
+        /* return back(); */
+
+        //redireccion con valores en session
+        $usuario= $peticion->input('txtnombre');
+        session()->flash('exito','usuario guardado '.$usuario);
+        return to_route('formulario');
+
+
         /* return 'La información ha llegado al controlador'; */
 
         //devuelve todo lo que contiene la petición
@@ -33,9 +48,8 @@ class controladorVistas extends Controller
         //Devuelve la ip desde la que se realiza la peticion
         //return $peticion->ip();
 
-        return $peticion->ip();
+       /*  return $peticion->ip(); */
     }
-
 
 }
 
