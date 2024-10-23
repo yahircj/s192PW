@@ -30,6 +30,16 @@ class controladorVistas extends Controller
 
         //redireccion con valores en session
         $usuario= $peticion->input('txtnombre');
+
+        $validated= $peticion->validate([
+
+            'txtnombre'=>'required|min:5|max:25',
+            'txtapellido'=>'required|min:3|max:25',
+            'txtcorreo'=>'required|email:rfc,dns',
+            'txttelefono'=>'required|numeric',
+
+        ]);
+
         session()->flash('exito','usuario guardado '.$usuario);
         return to_route('formulario');
 
