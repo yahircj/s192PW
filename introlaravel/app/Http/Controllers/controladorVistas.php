@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\validadorClientes;
 use Illuminate\Http\Request;
 
 class controladorVistas extends Controller
@@ -18,7 +19,7 @@ class controladorVistas extends Controller
         return view('clientes');
     }
     
-    public function procesarCliente(Request $peticion){
+    public function procesarCliente(validadorClientes $peticionValidada){
 
         //Respuesta de redirección
         //inicio
@@ -29,16 +30,7 @@ class controladorVistas extends Controller
         /* return back(); */
 
         //redireccion con valores en session
-        $usuario= $peticion->input('txtnombre');
-
-        $validated= $peticion->validate([
-
-            'txtnombre'=>'required|min:5|max:25',
-            'txtapellido'=>'required|min:3|max:25',
-            'txtcorreo'=>'required|email:rfc,dns',
-            'txttelefono'=>'required|numeric',
-
-        ]);
+        $usuario= $peticionValidada->input('txtnombre');
 
         session()->flash('exito','usuario guardado '.$usuario);
         return to_route('formulario');
