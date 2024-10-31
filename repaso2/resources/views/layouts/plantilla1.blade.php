@@ -15,10 +15,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('inicio')}}">Principio</a>
+          <a class="nav-link active" aria-current="page" href="{{route('inicio')}}">{{__('Principio')}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('Libro')}}">Registrar libro</a>
+          <a class="nav-link" href="{{route('Libro')}}">{{__('Registrar Libro')}}</a>
         </li>
       </ul>
     </div>
