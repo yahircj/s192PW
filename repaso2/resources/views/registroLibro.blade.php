@@ -7,7 +7,16 @@
   <div class="card-body">
     <h5 class="card-title">Formulario</h5>
 
-    
+    @session('exito')
+    <script>
+       Swal.fire({
+          title: "",
+            text: '{{$value}}',
+            icon: "info"
+        });
+    </script>
+  @endsession
+
 
     <form action="/libro" method="POST">
 

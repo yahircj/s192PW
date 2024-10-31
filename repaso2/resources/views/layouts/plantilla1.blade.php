@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @vite(['resources/js/app.js'])
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

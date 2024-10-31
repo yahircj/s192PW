@@ -19,7 +19,7 @@ class VistasControlador extends Controller
 
         $libro= $peticionValidada->input('txttitulo');
 
-        session()->flash('exito','Libro '.$libro.' Guardado');
-        return to_route('enviar');
+        session()->flash('exito','Libro "'.$libro.'" Guardado');
+        return to_route('Libro');
     }
 }
