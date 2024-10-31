@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Principio</a>
+          <a class="nav-link active" aria-current="page" href="{{route('inicio')}}">Principio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('Libro')}}">Registrar libro</a>

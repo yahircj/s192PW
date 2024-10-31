@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('principal');
-});
+use App\Http\Controllers\VistasControlador;
 
-route::view('/registro', 'registroLibro')->name('Libro');
+
+route::get('/', [VistasControlador::class,'home'])->name('inicio');
+route::get('/registro', [VistasControlador::class,'formulario'])->name('Libro');
