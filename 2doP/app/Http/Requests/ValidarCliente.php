@@ -23,7 +23,7 @@ class ValidarCliente extends FormRequest
     {
         return [
             
-            'txtcorreo' => 'required',
+            'txtcorreo' => 'required|email:rfc,dns',
             'txtcontrasena' => 'required',
             'txtedad' => 'required|numeric',
 

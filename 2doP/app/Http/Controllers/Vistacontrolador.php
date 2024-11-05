@@ -11,8 +11,8 @@ class Vistacontrolador extends Controller
     public function registrarClientes(validarCliente $peticionValidada){
             $cliente= $peticionValidada->input('txtcorreo');
     
-            session()->flash('exito','Libro '.$cliente.' Guardado');
-            return to_route('registrar');
+            session()->flash('exito','Se guardo el usuario: Ivan Isay');
+            return to_route('Registro');
         
     }
 }
