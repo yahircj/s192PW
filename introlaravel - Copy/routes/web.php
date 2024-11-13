@@ -2,9 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorVistas;
-use App\Http\Controllers\clienteController;
 
-//cONTROLADOR DE VISTAS
 
 route::get('/',[controladorVistas::class, 'home'])->name('inicio');
 
@@ -15,17 +13,6 @@ route::get('/clientes',[controladorVistas::class, 'consulta'])->name('clientes')
 Route::view('/componentes', 'componentes')->name('componentes'); 
 
 Route::post('/enviarCliente', [controladorVistas::class, 'procesarCliente'])->name('enviar');
-
-//CONTROLADOR DE CLIENTE
-
-route::get('/cliente/create',[clienteController::class, 'create'])->name('formulario');
-
-Route::post('/cliente', [clienteController::class, 'store'])->name('enviar');
-
-
-
-
-
 
 //Shift alt a
 //ruta tipo get
