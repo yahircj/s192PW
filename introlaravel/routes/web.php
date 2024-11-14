@@ -10,7 +10,7 @@ route::get('/',[controladorVistas::class, 'home'])->name('inicio');
 
 route::get('/form',[controladorVistas::class, 'formulario'])->name('formulario');
 
-route::get('/clientes',[controladorVistas::class, 'consulta'])->name('clientes');
+
  
 Route::view('/componentes', 'componentes')->name('componentes'); 
 
@@ -22,8 +22,7 @@ route::get('/cliente/create',[clienteController::class, 'create'])->name('formul
 
 Route::post('/cliente', [clienteController::class, 'store'])->name('enviar');
 
-
-
+route::get('/clientes',[clienteController::class, 'index'])->name('clientes');
 
 
 
