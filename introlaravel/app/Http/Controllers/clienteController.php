@@ -52,15 +52,16 @@ class clienteController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * VISTA
      */
+
     public function edit(string $id)
     {
-        //
+        return view('FormularioUpdate');
     }
 
     /**
-     * Update the specified resource in storage.
+     * aCTUALIZAR
      */
     public function update(Request $request, string $id)
     {

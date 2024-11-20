@@ -14,11 +14,13 @@
             <div class="card-body">
                 <h5 class="fw-bold">{{$cliente->correo}}</h5>
                 <h5 class="fw-medium">{{$cliente->telefono}}</h5>
-                <p class="card-text fw-lighter"></p>
+                <p class="card-text fw-lighter">{{ $cliente->id }}</</p>
+               
             </div>
+            
 
             <div class="card-footer text-muted">
-                <button type="submit" class="btn btn-warning btn-sm"> {{__('Actualizar')}}</button>
+                <a href="{{route('Actualizar',$cliente->id)}}" class="btn btn-primary">{{__('Actualizar')}}</a>
                 <button type="submit" class="btn btn-danger btn-sm">{{__('Eliminar')}}  </button>
             </div>
 

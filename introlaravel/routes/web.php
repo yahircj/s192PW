@@ -6,23 +6,25 @@ use App\Http\Controllers\clienteController;
 
 //cONTROLADOR DE VISTAS
 
-route::get('/',[controladorVistas::class, 'home'])->name('inicio');
+route::get('/', [controladorVistas::class, 'home'])->name('inicio');
 
-route::get('/form',[controladorVistas::class, 'formulario'])->name('formulario');
+route::get('/form', [controladorVistas::class, 'formulario'])->name('formulario');
 
 
- 
-Route::view('/componentes', 'componentes')->name('componentes'); 
+
+Route::view('/componentes', 'componentes')->name('componentes');
 
 Route::post('/enviarCliente', [controladorVistas::class, 'procesarCliente'])->name('enviar');
 
 //CONTROLADOR DE CLIENTE
 
-route::get('/cliente/create',[clienteController::class, 'create'])->name('formulario');
+route::get('/cliente/create', [clienteController::class, 'create'])->name('formulario');
 
 Route::post('/cliente', [clienteController::class, 'store'])->name('enviar');
 
-route::get('/clientes',[clienteController::class, 'index'])->name('clientes');
+route::get('/clientes', [clienteController::class, 'index'])->name('clientes');
+
+route::get('clientes/{id}/Update', [clienteController::class, 'edit'])->name('Actualizar');
 
 
 
@@ -43,4 +45,3 @@ Route::view('/clientes', 'clientes')->name('clientes');
 Route::view('/inicio', 'inicio')->name('inicio');
 
 */
-
