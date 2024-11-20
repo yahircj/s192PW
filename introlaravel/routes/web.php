@@ -24,8 +24,13 @@ Route::post('/cliente', [clienteController::class, 'store'])->name('enviar');
 
 route::get('/clientes', [clienteController::class, 'index'])->name('clientes');
 
+//Ruta para acceder a la vista de actualización.
 route::get('clientes/{id}/Update', [clienteController::class, 'edit'])->name('Actualizar');
 
+
+
+// Ruta para eliminar un cliente
+Route::delete('/clientes/{id}', [clienteController::class, 'destroy'])->name('Eliminar');
 
 
 //Shift alt a

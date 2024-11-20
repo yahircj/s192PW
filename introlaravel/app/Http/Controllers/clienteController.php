@@ -14,7 +14,7 @@ class clienteController extends Controller
      */
     public function index()
     {
-        $ConsultaClientes= DB::table('clientes')->get();
+        $ConsultaClientes = DB::table('clientes')->get();
         return view('clientes', compact('ConsultaClientes'));
     }
 
@@ -31,16 +31,19 @@ class clienteController extends Controller
      */
     public function store(validadorClientes $request)
     {
-        DB::table('clientes')->insert([ "nombre"=>$request->input('txtnombre'), "apellido"=>$request->input('txtapellido'),
-            "correo"=>$request->input('txtcorreo'), "telefono"=>$request->input('txttelefono'),
-            "created_at"=>Carbon::now(), "updated_at"=>Carbon::now()
+        DB::table('clientes')->insert([
+            "nombre" => $request->input('txtnombre'),
+            "apellido" => $request->input('txtapellido'),
+            "correo" => $request->input('txtcorreo'),
+            "telefono" => $request->input('txttelefono'),
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now()
         ]);
 
-        $usuario= $request->input('txtnombre');
+        $usuario = $request->input('txtnombre');
 
-        session()->flash('exito','usuario guardado '.$usuario);
+        session()->flash('exito', 'usuari@ guardado: ' . $usuario);
         return to_route('formulario');
-
     }
 
     /**
@@ -69,10 +72,15 @@ class clienteController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elminar un registro.
      */
     public function destroy(string $id)
     {
-        //
+        $nombre = DB::table('clientes')->where('id', $id)->value('nombre');
+
+        $deleted = DB::table('clientes')->where('id', $id)->delete();
+
+        session()->flash('exito', 'usuari@ ' . $nombre . ' eliminado correctamente');
+        return to_route('clientes');
     }
 }
