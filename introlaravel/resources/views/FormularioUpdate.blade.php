@@ -9,15 +9,6 @@
     {{-- inicia Tarjeta con formulario --}}
     <div class="container mt-5 col-md-6">
 
-        @session('exito')
-            <script>
-                Swal.fire({
-                    title: "Good job!",
-                    text: '{{ $value }}',
-                    icon: "info"
-                });
-            </script>
-        @endsession
 
         <div class="card font-monospace">
             <div class="card-header fs-5 text-center text-primary">
